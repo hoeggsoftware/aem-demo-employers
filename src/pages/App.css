@@ -20,3 +20,24 @@
     text-align: center; 
 }
 
+.sub-menu-container {
+    background-color: #005fcc;
+    height: 18rem;
+}
+
+.sub-list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-items: center;
+}
+
+.sub-list-item {
+    height: 100px;
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 32px;
+    background-color: white;
+}
+

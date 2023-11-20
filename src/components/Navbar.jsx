@@ -42,7 +42,7 @@ export default function Navbar() {
       </AppBar>
       <nav>
         <ul className="nav-list">
-            <li className="nav-list-item"><Link href="/jobseeker"><a>JOB SEEKERS</a></Link></li>
+            <li className="nav-list-item"><Link href="/jobseeker">JOB SEEKERS</Link></li>
             <li className="nav-list-item">EMPLOYERS</li>
         </ul>
       </nav>
