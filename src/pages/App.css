@@ -1,3 +1,8 @@
+@font-face {
+    font-family: mPlusHeavy;
+    src: url(./assets/Fonts/mplus-2p-heavy.ttf);
+}
+
 :root {
     --orange: rgb(245 102 0);
 }
@@ -44,19 +49,21 @@ body {
 .sub-menu-container {
     background-color: #005fcc;
     height: 18rem;
+    font-family: mPlusHeavy;
 }
 
 .container {
     width: 60%;
     margin: 0 auto 0 auto;
+    
 }
 
 .sub-menu-header {
     color: white;
-    font-size: 3em;
+    font-size: 4em;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 5%
+    padding-top: 5%;
 }
 
 .sub-list {
@@ -70,14 +77,10 @@ body {
 .sub-list-item {
     height: 100px;
     width: 200px;
-    border: 1px solid black;
     text-align: center;
     background-color: white;
     margin-right: 5%;
     margin-left: 0;
-}
-
-.accordion-container {
 }
 
 .MuiAccordion-root {
