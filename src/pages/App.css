@@ -1,7 +1,9 @@
-
+body {
+    margin: 0;
+}
 
 .footer {
-    position: absolute;
+    position: static;
     bottom: 0;
     width: 100%
 }
@@ -25,11 +27,25 @@
     height: 18rem;
 }
 
+.container {
+    width: 60%;
+    margin: 0 auto 0 auto;
+}
+
+.sub-menu-header {
+    color: white;
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5%
+}
+
 .sub-list {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
     list-style-type: none;
     align-items: center;
+    padding-left: 0;
 }
 
 .sub-list-item {
@@ -37,7 +53,23 @@
     width: 200px;
     border: 1px solid black;
     text-align: center;
-    margin-top: 32px;
     background-color: white;
+    margin-right: 5%;
+    margin-left: 0;
 }
+
+.accordion-container {
+}
+
+.MuiAccordion-root {
+    margin-bottom: 10px;
+}
+
+/* Job Seeker Page Styles  */
+
+.benefits-header {
+    color: rgb(245 102 0);
+}
+
+
 
