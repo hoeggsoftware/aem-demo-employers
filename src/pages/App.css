@@ -19,6 +19,10 @@ body {
     width: 100%
 }
 
+.MuiSvgIcon-root {
+    color: var(--orange)
+}
+
 /* Header and Navigation */
 
 .MuiToolbar-root {
@@ -42,6 +46,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.language-selector {
+    display: flex;
+}
+
+.MuiSelect-select {
+    font-family: mPlusHeavy;
+    color: var(--orange);
+    font-size: 1.4rem;
 }
 
 /* Sub Menu Items */
@@ -103,17 +117,20 @@ body {
 
 footer {
     height: 30rem;
+    border-top: 4px solid var(--orange)
 }
 
 .footer-container1 {
     display: flex;
     justify-content: space-evenly;
-    margin: auto;
+    margin: 10px auto;
     width: 80%;
+    text-align: center;
 }
 
 .footer-list {
     list-style-type: none;
+    text-align: left;
 }
 
 .footer-item {

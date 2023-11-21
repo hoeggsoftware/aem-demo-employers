@@ -27,13 +27,15 @@ const Navbar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Unemployment
           </Typography>
-          <FormControl>
+          <FormControl className="language-selector">
+            <InputLabel>Language</InputLabel>
             <Select
               labelId="language-selector"
               id="demo-simple-select"
               value={language}
               label="LANGUAGE"
               onChange={handleChange}
+              variant="standard"
             >
               <MenuItem value={"ENGLISH"}>ENGLISH</MenuItem>
               <MenuItem value={"SPANISH"}>SPANISH</MenuItem>
