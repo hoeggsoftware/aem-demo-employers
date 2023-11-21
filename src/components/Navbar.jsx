@@ -45,14 +45,14 @@ const Navbar = () => {
       <nav>
         <ul className="nav-list">
           <li className="nav-list-item">
-            <Card>
-              <CardContent>
-                <Link href="/jobseeker">
+            {/* <Card>
+              <CardContent> */}
+                <Link className="nav-link" href="/jobseeker">
                   <JobSeekerImage />
                   JOB SEEKERS
                 </Link>
-              </CardContent>
-            </Card>
+              {/* </CardContent>
+            </Card> */}
           </li>
           <li className="nav-list-item">
             <Card>

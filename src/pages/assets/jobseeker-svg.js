@@ -8,6 +8,8 @@ const JobSeekerImage = () => {
       viewBox="0 0 96 96"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img" 
+      aria-labelledby="Job Seekers"
     >
       <path
         d="M60.0742 12.0742L55.7823 11.2453L69.4098 4.67969L63.6573 15.0433L62.3168 13.5861L61.3189 15.3533L60.6877 13.1171"
