@@ -1,3 +1,9 @@
+:root {
+    --orange: rgb(245 102 0);
+}
+
+
+
 body {
     margin: 0;
 }
@@ -8,6 +14,12 @@ body {
     width: 100%
 }
 
+/* Header and Navigation */
+
+.MuiToolbar-root {
+    background-color: white;
+    color: var(--orange)
+}
 
 .nav-list {
     display: flex;
@@ -18,9 +30,10 @@ body {
 .nav-list-item {
     height: 150px;
     width: 200px;
-    border: 1px solid black;
     text-align: center; 
 }
+
+/* Sub Menu Items */
 
 .sub-menu-container {
     background-color: #005fcc;
@@ -68,7 +81,7 @@ body {
 /* Job Seeker Page Styles  */
 
 .benefits-header {
-    color: rgb(245 102 0);
+    color: var(--orange);
 }
 
 

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Layout from '@/components/Layout'
 import './App.css'
-import Benefits from './benefits'
+import Benefits from '../components/benefits'
 
 
 
