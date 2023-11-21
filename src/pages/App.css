@@ -75,8 +75,10 @@ body {
 }
 
 .sub-list-item {
-    height: 100px;
-    width: 200px;
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    width: 17rem;
     text-align: center;
     background-color: white;
     margin-right: 5%;
@@ -95,3 +97,25 @@ body {
 
 
 
+
+
+/* Footer */
+
+footer {
+    height: 30rem;
+}
+
+.footer-container1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 80%;
+}
+
+.footer-list {
+    list-style-type: none;
+}
+
+.footer-item {
+    width: 10%
+}

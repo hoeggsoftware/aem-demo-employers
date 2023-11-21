@@ -45,24 +45,22 @@ const Navbar = () => {
       <nav>
         <ul className="nav-list">
           <li className="nav-list-item">
-            {/* <Card>
-              <CardContent> */}
                 <Link className="nav-link" href="/jobseeker">
                   <JobSeekerImage />
                   JOB SEEKERS
                 </Link>
-              {/* </CardContent>
-            </Card> */}
           </li>
-          <li className="nav-list-item">
-            <Card>
-              <CardContent>
-                <Link href="/employers">
+          <li className="nav-list-item">            
+                <Link className="nav-link" href="/employers">
                   <EmployerImage />
                   EMPLOYERS
                 </Link>
-              </CardContent>
-            </Card>
+          </li>
+          <li className="nav-list-item">            
+                <Link className="nav-link" href="/employers">
+                  <EmployerImage />
+                  LOCATIONS
+                </Link>
           </li>
         </ul>
       </nav>

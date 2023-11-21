@@ -1,6 +1,8 @@
 import * as React from "react";
 import Layout from "@/components/Layout";
 import "./App.css";
+import JobSearch from "./assets/job-search";
+import LostMyJob from "./assets/lost-my-job";
 import Benefits from "../components/benefits";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -15,7 +17,8 @@ const JobSeeker = () => {
             <ul className="sub-list">
               <Card className="sub-list-item">
                 <CardContent >
-                  <li >
+                  <li>
+                    <LostMyJob />
                     Lost My Job
                   </li>
                 </CardContent>
@@ -23,6 +26,7 @@ const JobSeeker = () => {
               <Card className="sub-list-item">
                 <CardContent>
                   <li >
+                    <JobSearch />
                     Job Search
                   </li>
                 </CardContent>
