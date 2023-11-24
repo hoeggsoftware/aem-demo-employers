@@ -5,7 +5,17 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
 
-const Benefits = () => {
+
+
+const Benefits = (props) => {
+
+  /* 
+  Maybe use the classname of parent component to set usestate? / create use state in parent component to set the prop (give them IDs) and use document.querySelector('ID') / hardcode it (not very flexible)
+
+const [benefits, setBenefits] = React.useState(props)
+*/
+
+
   return (
     <div className="container">
       <h2 className="benefits-header">Benefits</h2>
