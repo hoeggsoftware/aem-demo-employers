@@ -5,21 +5,20 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
 
-
-
 const Benefits = (props) => {
-
   /* 
   Maybe use the classname of parent component to set usestate? / create use state in parent component to set the prop (give them IDs) and use document.querySelector('ID') / hardcode it (not very flexible)
 
 const [benefits, setBenefits] = React.useState(props)
 */
 
-
   return (
     <div className="container">
       <h2 className="benefits-header">Benefits</h2>
-      <h3>***An instance of each item below will automatically be injected with JS using the MAP function.***</h3>
+      <h3>
+        ***An instance of each item below will automatically be injected with JS
+        using the MAP function.***
+      </h3>
       <div className="accordion-container">
         <Accordion>
           <AccordionSummary
@@ -31,8 +30,9 @@ const [benefits, setBenefits] = React.useState(props)
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -46,8 +46,9 @@ const [benefits, setBenefits] = React.useState(props)
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -57,12 +58,15 @@ const [benefits, setBenefits] = React.useState(props)
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography>The European Union and Unemployment Insurance</Typography>
+            <Typography>
+              The European Union and Unemployment Insurance
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -76,8 +80,9 @@ const [benefits, setBenefits] = React.useState(props)
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -91,8 +96,9 @@ const [benefits, setBenefits] = React.useState(props)
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
