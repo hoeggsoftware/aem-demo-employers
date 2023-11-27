@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import footerItems from "./footercontent";
+import footerItems from "./mockups/footercontent";
 
 export default function Footer() {
   // IF NECESSARY CREATE JS FILE & FUNCTION TO STORE LIST AND MAP THROUGH EACH AND RETURN A UL WITH ITS CHILDREN AS LI ITEMS

@@ -5,6 +5,7 @@
 
 :root {
     --orange: rgb(245 102 0);
+    width: 100% !important;
 }
 
 
@@ -109,7 +110,12 @@ body {
     color: var(--orange);
 }
 
+main {
+    display: grid;
+}
 
+.slides {
+}
 
 
 

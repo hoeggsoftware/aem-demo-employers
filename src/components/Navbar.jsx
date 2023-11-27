@@ -25,7 +25,7 @@ const Navbar = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Unemployment
+            <Link href="/">Unemployment</Link>
           </Typography>
           <FormControl className="language-selector">
             <InputLabel>Language</InputLabel>
