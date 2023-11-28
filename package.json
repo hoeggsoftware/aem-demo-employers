@@ -17,6 +17,8 @@
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

@@ -5,6 +5,8 @@
 
 :root {
     --orange: rgb(245 102 0);
+    --slider-arrow-background: rgba(0, 0, 0, .1);
+    --slider-arrow-background2: rgba(0, 0, 0, .3);
     width: 100% !important;
 }
 
@@ -22,6 +24,66 @@ body {
 
 .MuiSvgIcon-root {
     color: var(--orange)
+}
+
+/*Slick Slider */
+
+.slider-container {
+    background-color: #005fcc;
+    height: 100%;
+}
+
+.slick-slider {
+    display: grid;
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    right: 10px;
+}
+
+.slick-track {
+    overflow: hidden;
+}
+
+.slick-arrow {
+    color: pink;
+    background-color: var(--slider-arrow-background);
+    height: 60%;
+    position: absolute;
+}
+
+.slick-arrow:hover, .slick-arrow:focus {
+    color: pink;
+    background-color: var(--slider-arrow-background2);
+}
+
+.slick-image {
+    height: 100%
+}
+
+.slick-prev {
+    left: 1px;
+    z-index: 1;
+    top: 45%;
+}
+
+.slick-next {
+    right: 1px;
+    z-index: 1;
+    top: 45%;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 1%;
+}
+
+.slick-active button::before {
+    color: blue;
+}
+
+.slick-dots li button::before {
+    color: white !important;
 }
 
 /* Header and Navigation */
@@ -108,13 +170,6 @@ body {
 
 .benefits-header {
     color: var(--orange);
-}
-
-main {
-    display: grid;
-}
-
-.slides {
 }
 
 
