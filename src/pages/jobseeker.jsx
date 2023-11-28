@@ -10,6 +10,7 @@ import CardContent from "@mui/material/CardContent";
 const JobSeeker = () => {
   return (
     <Layout>
+      {/* change sub-menu into a component to make easier to show on lost my job and job search pages */}
       <div className="sub-menu">
         <div className="sub-menu-container">
           <div className="container">

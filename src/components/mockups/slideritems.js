@@ -1,18 +1,18 @@
 const sliderItems = [
     {
-        "image": "https://loremflickr.com/500/273/work",
+        "image": "https://loremflickr.com/1440/273/work",
         "title": "Image Placeholder1",
     },
     {
-        "image": "https://loremflickr.com/500/273/cat",
+        "image": "https://loremflickr.com/1440/273/cat",
         "title": "Image Placeholder2",
     },
     {
-        "image": "https://loremflickr.com/500/273/dog",
+        "image": "https://loremflickr.com/1440/273/dog",
         "title": "Image Placeholder3",
     },
     {
-        "image": "https://loremflickr.com/500/273/escalator",
+        "image": "https://loremflickr.com/1440/273/escalator",
         "title": "Image Placeholder4",
     }
 ]

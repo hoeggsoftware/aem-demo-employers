@@ -46,15 +46,11 @@ main {
 
 .slick-slider {
     display: grid;
-    width: 500px;
-    margin: auto;
-    position: absolute;
-    right: 10px;
-    box-shadow: 1px 10px 10px 1px black;
+    width: 100%;
 }
 
 .slick-track {
-    
+
 }
 
 .slick-arrow {
@@ -70,6 +66,7 @@ main {
 }
 
 .slick-image {
+    margin: .5rem auto 0 auto;
     height: 17.07rem;
 }
 

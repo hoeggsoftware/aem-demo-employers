@@ -10,7 +10,7 @@ export default function Home() {
   return (
    <Layout>
       <div className="home-content">
-      <h1 className="home-header">Central Office of Unemployment</h1>
+      {/* <h1 className="home-header">Central Office of Unemployment</h1> */}
       <Carousel />
       </div>
    </Layout>
