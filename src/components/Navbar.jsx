@@ -25,7 +25,7 @@ const Navbar = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link href="/">Unemployment</Link>
+            <Link href="/" className="link-dec logo-link"><span className="t-underline">C</span>o<span className="t-underline">U</span></Link>
           </Typography>
           <FormControl className="language-selector">
             <InputLabel>Language</InputLabel>
@@ -47,19 +47,19 @@ const Navbar = () => {
       <nav>
         <ul className="nav-list">
           <li className="nav-list-item">
-            <Link className="nav-link" href="/jobseeker">
+            <Link className="nav-link link-dec" href="/jobseeker">
               <JobSeekerImage />
               JOB SEEKERS
             </Link>
           </li>
           <li className="nav-list-item">
-            <Link className="nav-link" href="/employers">
+            <Link className="nav-link link-dec" href="/employers">
               <EmployerImage />
               EMPLOYERS
             </Link>
           </li>
           <li className="nav-list-item">
-            <Link className="nav-link" href="/employers">
+            <Link className="nav-link link-dec" href="/employers">
               <EmployerImage />
               LOCATIONS
             </Link>

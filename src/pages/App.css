@@ -16,6 +16,10 @@ body {
     margin: 0;
 }
 
+main {
+    height: 700px;
+}
+
 .footer {
     position: static;
     bottom: 0;
@@ -26,11 +30,18 @@ body {
     color: var(--orange)
 }
 
+.home-content {
+
+}
+
 /*Slick Slider */
 
 .slider-container {
     background-color: #005fcc;
     height: 100%;
+    min-height: 18rem;
+    margin-top: none;
+    padding-top: none;
 }
 
 .slick-slider {
@@ -39,10 +50,11 @@ body {
     margin: auto;
     position: absolute;
     right: 10px;
+    box-shadow: 1px 10px 10px 1px black;
 }
 
 .slick-track {
-    overflow: hidden;
+    
 }
 
 .slick-arrow {
@@ -58,7 +70,7 @@ body {
 }
 
 .slick-image {
-    height: 100%
+    height: 17.07rem;
 }
 
 .slick-prev {
@@ -83,7 +95,38 @@ body {
 }
 
 .slick-dots li button::before {
-    color: white !important;
+    color: var(--orange) !important;
+    background-color: var(--orange);
+    border-radius: 50px;
+}
+
+.home-header {
+    color: white;
+    position: relative;
+    top: 4rem;
+    margin: 0 
+}
+
+.link-dec:link {
+    color: black;
+    text-decoration: none;
+    font-family: mPlusHeavy;
+}
+
+.link-dec:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.logo-link {
+    font-size: 25px;
+}
+
+.t-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+    text-decoration-thickness: 2px;
+    font-weight: bold;
 }
 
 /* Header and Navigation */
