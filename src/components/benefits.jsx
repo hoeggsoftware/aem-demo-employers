@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -12,15 +13,45 @@ const Benefits = (props) => {
 const [benefits, setBenefits] = React.useState(props)
 */
 
+  const [benefits, setBenefits] = useState([]);
+
+  const fetchBenefits = () => {
+    fetch(
+      "https://publish-p124452-e1227370.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/job-seeker-benefits"
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((d) => {
+        setBenefits(d.data.contentBoxList.items);
+      });
+
+    console.log(benefits);
+  };
+
+  useEffect(() => {
+    fetchBenefits();
+  }, []);
+
   return (
     <div className="container">
       <h2 className="benefits-header">Benefits</h2>
-      <h3>
-        ***An instance of each item below will automatically be injected with JS
-        using the MAP function.***
-      </h3>
       <div className="accordion-container">
-        <Accordion>
+        {benefits.map((benefit) => (
+          <Accordion key={benefit.title}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>{benefit.title}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>{benefit.text.plaintext}</Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+        {/* <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -101,7 +132,7 @@ const [benefits, setBenefits] = React.useState(props)
               eget.
             </Typography>
           </AccordionDetails>
-        </Accordion>
+        </Accordion> */}
       </div>
     </div>
   );

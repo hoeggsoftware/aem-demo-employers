@@ -1,12 +1,12 @@
-import AEMHeadless from "@adobe/aem-headless-client-js";
+/* import AEMHeadless from "@adobe/aem-headless-client-js";
 
 const aemUser = process.env.REACT_APP_AEM_USER;
 const aemPass = process.env.REACT_APP_AEM_PASS;
 
 export const aemHeadlessClient = new AEMHeadless({
-  serviceURL: "http://publish-p124452-e1227370.adobeaemcloud.com",
-  endpoint: "/content/cq:graphql/aem-demo-employers/endpoint",
-  fetch: fetch,
+  serviceURL: "https://publish-p124452-e1227370.adobeaemcloud.com/",
+  endpoint: "graphql/execute.json/aem-demo-employers/job-seeker-benefits",
+
 });
 
 const getPersistedQueries = async () => {
@@ -17,3 +17,4 @@ const getPersistedQueries = async () => {
 };
 
 export default getPersistedQueries;
+ */

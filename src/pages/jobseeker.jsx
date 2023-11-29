@@ -10,9 +10,7 @@ import CardContent from "@mui/material/CardContent";
 import getPersistedQueries from "@/aem-headless";
 
 const JobSeeker = () => {
-  useEffect(() => {
-    getPersistedQueries();
-  }, []);
+  
 
   return (
     <Layout>
