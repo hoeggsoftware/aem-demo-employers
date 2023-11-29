@@ -38,8 +38,8 @@ const JobSeekerImage = () => {
       <path
         d="M43.209 11.2433V8.80042H44.4321"
         stroke="black"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
       <path

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
 import "./App.css";
 import JobSearch from "./assets/job-search";
@@ -6,8 +7,13 @@ import LostMyJob from "./assets/lost-my-job";
 import Benefits from "../components/benefits";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import getPersistedQueries from "@/aem-headless";
 
 const JobSeeker = () => {
+  useEffect(() => {
+    getPersistedQueries();
+  }, []);
+
   return (
     <Layout>
       {/* change sub-menu into a component to make easier to show on lost my job and job search pages */}
@@ -17,7 +23,7 @@ const JobSeeker = () => {
             <h1 className="sub-menu-header">Job Seekers</h1>
             <ul className="sub-list">
               <Card className="sub-list-item">
-                <CardContent >
+                <CardContent>
                   <li>
                     <LostMyJob />
                     Lost My Job
@@ -26,7 +32,7 @@ const JobSeeker = () => {
               </Card>
               <Card className="sub-list-item">
                 <CardContent>
-                  <li >
+                  <li>
                     <JobSearch />
                     Job Search
                   </li>
