@@ -50,7 +50,7 @@ main {
 }
 
 .slick-track {
-
+    height: 26rem
 }
 
 .slick-arrow {
@@ -158,7 +158,12 @@ main {
 .MuiSelect-select {
     font-family: mPlusHeavy;
     color: var(--orange);
-    font-size: 1.4rem;
+    font-size: 1.9rem;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+    display: block;
+    text-align: center;
 }
 
 /* Sub Menu Items */
