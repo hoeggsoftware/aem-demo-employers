@@ -1,0 +1,11 @@
+List of queries to make:
+
+Nav-items
+Job-seeker and Employer sub-items
+Footer-items
+Job-seeker and Employer benefits
+Office Locations
+Languages???
+Job-seeker and Employer Next Steps
+
+create section under footer to shows the logo and contact info.
