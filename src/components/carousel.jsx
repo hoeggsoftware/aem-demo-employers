@@ -38,7 +38,7 @@ const Carousel = () => {
       {images.map((image) => (
         <div key={image.image.path}>
           <div>
-            <img src={image.image._publishUrl} width="100%" height={"100%"} />
+            <img src={image.image._publishUrl} width="100%" height="430em"/>
           </div>
         </div>
       ))}

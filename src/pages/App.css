@@ -17,12 +17,11 @@ body {
 }
 
 main {
-    height: 700px;
-}
+    min-height: 50rem;
+    }
 
 .footer {
-    position: static;
-    bottom: 0;
+    position: static !important;
     width: 100%
 }
 
@@ -177,7 +176,6 @@ main {
 .container {
     width: 60%;
     margin: 0 auto 0 auto;
-    
 }
 
 .sub-menu-header {
@@ -211,6 +209,10 @@ main {
     margin-bottom: 10px;
 }
 
+.accordion-container {
+    
+}
+
 /* Job Seeker Page Styles  */
 
 .benefits-header {
@@ -222,6 +224,7 @@ main {
 /* Footer */
 
 footer {
+    
     height: 30rem;
     border-top: 4px solid var(--orange)
 }

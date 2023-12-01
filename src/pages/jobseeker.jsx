@@ -39,8 +39,8 @@ const JobSeeker = () => {
             </ul>
           </div>
         </div>
-        <Benefits />
       </div>
+      <Benefits />
     </Layout>
   );
 };

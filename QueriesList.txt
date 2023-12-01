@@ -1,11 +1,38 @@
+##TO-DO##
+Set up meeting with Ruk to go over some of the content and how it is set up to get a better understand so I can know what to provide him with and know where to look for things as necessary.
+
 List of queries to make:
 
 Nav-items
 Job-seeker and Employer sub-items
-Footer-items
+Footer-items -> NEEDS MORE CONTENT
 Job-seeker and Employer benefits
 Office Locations
 Languages???
 Job-seeker and Employer Next Steps
+News -> fake articles -> NEED MORE INFO FOR THE NEWS BOX!!!
+same find quickly items from the footer. But, only the find quickly so should be able to use the footer-items.
 
-create section under footer to shows the logo and contact info.
+## create section under footer to shows the logo and contact info.
+## get Ruk to update nav and footer items with proper linkage which is the page with /path no need to do full URL. So it should be path and not url in the persisted query. CREATE LIST
+
+
+nav-items:
+
+{
+  navigationElementList {
+    items {
+      title
+      image {
+       	... on DocumentRef {
+          size
+          format
+          _publishUrl          
+        }
+      }
+    }
+  }
+}
+
+
+
