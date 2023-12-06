@@ -232,11 +232,33 @@ main {
     margin-top: 30%;
 }
 
+.location-card ul {
+    padding: 0;
+}
+
 .location-card ul li {
     list-style-type: none;
     text-align: left;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 1.25rem;
+}
+
+.location-item {
+    border-left: 6px solid black;
+    border-radius: 5px;
+    padding-left: 10px; 
+    margin: 3px;
+}
+
+.active-item {
+    border-left: 6px solid var(--orange)
+}
+
+.location-info-card {
+    width: 50rem;
+    height: 100%;
+    margin-top: 20%;
+    margin-left: 10px;
 }
 
 /* Footer */
