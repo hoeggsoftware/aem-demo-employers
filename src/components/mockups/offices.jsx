@@ -6,7 +6,7 @@ const Offices = [
     phone: "123-123-4567",
     hours: [
       {
-        m2f: "8:00am - 5:00pm",
+        weekday: "8:00am - 5:00pm",
         sat: "8:00am - 12:00pm",
       },
     ],
@@ -26,7 +26,7 @@ const Offices = [
     phone: "312-555-0198",
     hours: [
       {
-        m2f: "9:00am - 6:00pm",
+        weekday: "9:00am - 6:00pm",
         sat: "Closed",
         sun: "Closed",
       },
@@ -53,7 +53,7 @@ const Offices = [
     phone: "512-555-0234",
     hours: [
       {
-        m2f: "8:00am - 5:00pm",
+        weekday: "8:00am - 5:00pm",
         sat: "9:00am - 1:00pm",
         sun: "Closed",
       },
@@ -80,7 +80,7 @@ const Offices = [
     phone: "919-555-0345",
     hours: [
       {
-        m2f: "8:00am - 5:00pm",
+        weekday: "8:00am - 5:00pm",
         sat: "10:00am - 2:00pm",
         sun: "Closed",
       },
@@ -107,7 +107,7 @@ const Offices = [
     phone: "410-555-0523",
     hours: [
       {
-        m2f: "9:00am - 5:30pm",
+        weekday: "9:00am - 5:30pm",
         sat: "Closed",
         sun: "Closed",
       },
@@ -134,7 +134,7 @@ const Offices = [
     phone: "303-555-0678",
     hours: [
       {
-        m2f: "8:00am - 5:00pm",
+        weekday: "8:00am - 5:00pm",
         sat: "Closed",
         sun: "Closed",
       },
@@ -161,7 +161,7 @@ const Offices = [
     phone: "312-555-0789",
     hours: [
       {
-        m2f: "9:00am - 6:00pm",
+        weekday: "9:00am - 6:00pm",
         sat: "9:00am - 1:00pm",
         sun: "Closed",
       },
@@ -188,7 +188,7 @@ const Offices = [
     phone: "214-555-0888",
     hours: [
       {
-        m2f: "8:30am - 5:00pm",
+        weekday: "8:30am - 5:00pm",
         sat: "Closed",
         sun: "Closed",
       },
