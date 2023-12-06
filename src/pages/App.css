@@ -219,7 +219,25 @@ main {
     color: var(--orange);
 }
 
+/* Location */
 
+.locations-container {
+    display: flex;
+}
+
+.location-card {
+    text-align: center;
+    height: 100%;
+    width: 22.5rem;
+    margin-top: 30%;
+}
+
+.location-card ul li {
+    list-style-type: none;
+    text-align: left;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+}
 
 /* Footer */
 
