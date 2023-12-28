@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,18 +15,42 @@ import CardContent from "@mui/material/CardContent";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [language, setLanguage] = React.useState("ENGLISH");
+  const [language, setLanguage] = useState("ENGLISH");
+  const [images, setImages] = useState([]);
 
   const handleChange = (event) => {
     setLanguage(event.target.value);
   };
+  const fetchNavItems = () => {
+    fetch(
+      "https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/nav-items",
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((d) => {
+        setImages(d.data.navigationElementList.items);
+      });
+  };
+
+  useEffect(() => {
+    fetchNavItems();
+  }, []);
+
+  const findImageUrlByTitle = (title) => {
+    const item = images.find(i => i.title === title);
+    return item ? item.image._publishUrl : '';
+  }
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link href="/" className="link-dec logo-link"><span className="t-underline">C</span>o<span className="t-underline">U</span></Link>
+            <Link href="/" className="link-dec logo-link">
+              <span className="t-underline">C</span>o
+              <span className="t-underline">U</span>
+            </Link>
           </Typography>
           <FormControl className="language-selector">
             <InputLabel>Language</InputLabel>
@@ -48,13 +73,13 @@ const Navbar = () => {
         <ul className="nav-list">
           <li className="nav-list-item">
             <Link className="nav-link link-dec" href="/jobseeker">
-              <JobSeekerImage />
+              <img src={findImageUrlByTitle("Job Seekers")} alt="Job Seekers" />
               JOB SEEKERS
             </Link>
           </li>
           <li className="nav-list-item">
             <Link className="nav-link link-dec" href="/employers">
-              <EmployerImage />
+              <img src={findImageUrlByTitle("Employers and Partners")} alt="Employers" />
               EMPLOYERS
             </Link>
           </li>

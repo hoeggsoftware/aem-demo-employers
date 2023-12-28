@@ -61,11 +61,11 @@ const Locations = () => {
                           <p key={index}>
                             {day.toUpperCase()}: {hours}
                           </p>
-                        )
+                        ),
                       )}
                     </div>
                   </div>
-                )
+                ),
               )}
             </Card>
           </div>

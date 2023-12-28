@@ -6,6 +6,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
 
+const fetchUrl = process.env.REACT_APP_FETCH_URL;
+
 const Benefits = (props) => {
   /* 
   Maybe use the classname of parent component to set usestate? / create use state in parent component to set the prop (give them IDs) and use document.querySelector('ID') / hardcode it (not very flexible)
@@ -17,7 +19,7 @@ const [benefits, setBenefits] = React.useState(props)
 
   const fetchBenefits = () => {
     fetch(
-      "https://publish-p124452-e1227370.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/job-seeker-benefits"
+      `https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/content-box-by-path;path=/content/dam/aem-demo-employers/en/job-seekers`,
     )
       .then((res) => {
         return res.json();

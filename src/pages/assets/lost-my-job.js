@@ -157,5 +157,4 @@ const LostMyJob = () => {
   );
 };
 
-
-export default LostMyJob
+export default LostMyJob;

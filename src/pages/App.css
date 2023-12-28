@@ -1,287 +1,283 @@
 @font-face {
-    font-family: mPlusHeavy;
-    src: url(./assets/Fonts/mplus-2p-heavy.ttf);
+  font-family: mPlusHeavy;
+  src: url(./assets/Fonts/mplus-2p-heavy.ttf);
 }
 
 :root {
-    --orange: rgb(245 102 0);
-    --slider-arrow-background: rgba(0, 0, 0, .1);
-    --slider-arrow-background2: rgba(0, 0, 0, .3);
-    width: 100% !important;
+  --orange: rgb(245 102 0);
+  --slider-arrow-background: rgba(0, 0, 0, 0.1);
+  --slider-arrow-background2: rgba(0, 0, 0, 0.3);
+  width: 100% !important;
 }
 
-
-
 body {
-    margin: 0;
+  margin: 0;
 }
 
 main {
-    min-height: 50rem;
-    }
+  min-height: 50rem;
+}
 
 .footer {
-    position: static !important;
-    width: 100%
+  position: static !important;
+  width: 100%;
 }
 
 .MuiSvgIcon-root {
-    color: var(--orange)
+  color: var(--orange);
 }
 
 .home-content {
-
 }
 
 /*Slick Slider */
 
 .slider-container {
-    background-color: #005fcc;
-    height: 100%;
-    min-height: 18rem;
-    margin-top: none;
-    padding-top: none;
+  background-color: #005fcc;
+  height: 100%;
+  min-height: 18rem;
+  margin-top: none;
+  padding-top: none;
 }
 
 .slick-slider {
-    display: grid;
-    width: 100%;
+  display: grid;
+  width: 100%;
 }
 
 .slick-track {
-    height: 26rem
+  height: 26rem;
 }
 
 .slick-arrow {
-    color: pink;
-    background-color: var(--slider-arrow-background);
-    height: 60%;
-    position: absolute;
+  color: pink;
+  background-color: var(--slider-arrow-background);
+  height: 60%;
+  position: absolute;
 }
 
-.slick-arrow:hover, .slick-arrow:focus {
-    color: pink;
-    background-color: var(--slider-arrow-background2);
+.slick-arrow:hover,
+.slick-arrow:focus {
+  color: pink;
+  background-color: var(--slider-arrow-background2);
 }
 
 .slick-image {
-    margin: .5rem auto 0 auto;
-    height: 17.07rem;
+  margin: 0.5rem auto 0 auto;
+  height: 17.07rem;
 }
 
 .slick-prev {
-    left: 1px;
-    z-index: 1;
-    top: 45%;
+  left: 1px;
+  z-index: 1;
+  top: 45%;
 }
 
 .slick-next {
-    right: 1px;
-    z-index: 1;
-    top: 45%;
+  right: 1px;
+  z-index: 1;
+  top: 45%;
 }
 
 .slick-dots {
-    position: absolute;
-    bottom: 1%;
+  position: absolute;
+  bottom: 1%;
 }
 
 .slick-active button::before {
-    color: blue;
+  color: blue;
 }
 
 .slick-dots li button::before {
-    color: var(--orange) !important;
-    background-color: var(--orange);
-    border-radius: 50px;
+  color: var(--orange) !important;
+  background-color: var(--orange);
+  border-radius: 50px;
 }
 
 .home-header {
-    color: white;
-    position: relative;
-    top: 4rem;
-    margin: 0 
+  color: white;
+  position: relative;
+  top: 4rem;
+  margin: 0;
 }
 
 .link-dec:link {
-    color: black;
-    text-decoration: none;
-    font-family: mPlusHeavy;
+  color: black;
+  text-decoration: none;
+  font-family: mPlusHeavy;
 }
 
 .link-dec:visited {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .logo-link {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .t-underline {
-    text-decoration: underline;
-    text-decoration-color: var(--orange);
-    text-decoration-thickness: 2px;
-    font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 2px;
+  font-weight: bold;
 }
 
 /* Header and Navigation */
 
 .MuiToolbar-root {
-    background-color: white;
-    color: var(--orange)
+  background-color: white;
+  color: var(--orange);
 }
 
 .nav-list {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
 }
 
 .nav-list-item {
-    height: 150px;
-    width: 200px;
-    text-align: center;
+  height: 150px;
+  width: 200px;
+  text-align: center;
 }
 
 .nav-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .language-selector {
-    display: flex;
+  display: flex;
 }
 
 .MuiSelect-select {
-    font-family: mPlusHeavy;
-    color: var(--orange);
-    font-size: 1.9rem;
+  font-family: mPlusHeavy;
+  color: var(--orange);
+  font-size: 1.9rem;
 }
 
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 /* Sub Menu Items */
 
 .sub-menu-container {
-    background-color: #005fcc;
-    height: 18rem;
-    font-family: mPlusHeavy;
+  background-color: #005fcc;
+  height: 18rem;
+  font-family: mPlusHeavy;
 }
 
 .container {
-    width: 60%;
-    margin: 0 auto 0 auto;
+  width: 60%;
+  margin: 0 auto 0 auto;
 }
 
 .sub-menu-header {
-    color: white;
-    font-size: 4em;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 5%;
+  color: white;
+  font-size: 4em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 5%;
 }
 
 .sub-list {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    align-items: center;
-    padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  padding-left: 0;
 }
 
 .sub-list-item {
-    display: flex;
-    align-items: center;
-    height: 7rem;
-    width: 17rem;
-    text-align: center;
-    background-color: white;
-    margin-right: 5%;
-    margin-left: 0;
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  width: 17rem;
+  text-align: center;
+  background-color: white;
+  margin-right: 5%;
+  margin-left: 0;
 }
 
 .MuiAccordion-root {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .accordion-container {
-    
 }
 
 /* Job Seeker Page Styles  */
 
 .benefits-header {
-    color: var(--orange);
+  color: var(--orange);
 }
 
 /* Location */
 
 .locations-container {
-    display: flex;
+  display: flex;
 }
 
 .location-card {
-    text-align: center;
-    height: 100%;
-    width: 22.5rem;
-    margin-top: 30%;
+  text-align: center;
+  height: 100%;
+  width: 22.5rem;
+  margin-top: 30%;
 }
 
 .location-card ul {
-    padding: 0;
+  padding: 0;
 }
 
 .location-card ul li {
-    list-style-type: none;
-    text-align: left;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.25rem;
+  list-style-type: none;
+  text-align: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.25rem;
 }
 
 .location-item {
-    border-left: 6px solid black;
-    border-radius: 5px;
-    padding-left: 10px; 
-    margin: 3px;
+  border-left: 6px solid black;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin: 3px;
 }
 
 .active-item {
-    border-left: 6px solid var(--orange)
+  border-left: 6px solid var(--orange);
 }
 
 .location-info-card {
-    width: 50rem;
-    height: 100%;
-    margin-top: 20%;
-    margin-left: 10px;
+  width: 50rem;
+  height: 100%;
+  margin-top: 20%;
+  margin-left: 10px;
 }
 
 /* Footer */
 
 footer {
-    
-    height: 30rem;
-    border-top: 4px solid var(--orange)
+  height: 30rem;
+  border-top: 4px solid var(--orange);
 }
 
 .footer-container1 {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 10px auto;
-    width: 80%;
-    text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px auto;
+  width: 80%;
+  text-align: center;
 }
 
 .footer-list {
-    list-style-type: none;
-    text-align: left;
+  list-style-type: none;
+  text-align: left;
 }
 
 .footer-item {
-    width: 10%
+  width: 10%;
 }

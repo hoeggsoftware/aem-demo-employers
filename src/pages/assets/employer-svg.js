@@ -8,7 +8,8 @@ const EmployerImage = () => {
       viewBox="0 0 96 96"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      role="img" aria-labelledby="Employers"
+      role="img"
+      aria-labelledby="Employers"
     >
       <path
         d="M73.6322 78.3278C69.5232 51.7907 45.4643 40.2788 45.4643 40.2788L35.4427 45.456C35.0899 45.456 37.3211 54.9624 37.3211 54.9624L52.1665 61.5385L65.9135 82.7981L76.3716 79.1839L73.6322 78.3278Z"
@@ -168,4 +169,4 @@ const EmployerImage = () => {
   );
 };
 
-export default EmployerImage
+export default EmployerImage;

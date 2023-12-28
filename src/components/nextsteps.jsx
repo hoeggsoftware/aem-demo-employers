@@ -1,25 +1,17 @@
 import { useState, useEffect } from "react";
 
-
-
-
-
 const NextSteps = (prop) => {
-    const [page, setPage] = useState(prop)
+  const [page, setPage] = useState(prop);
 
-    fetch('url')
+  fetch("url")
     .then((res) => {
-        return res.json();
+      return res.json();
     })
-    .then((d) => {
-        
-    })
+    .then((d) => {});
 
-    return (
-        <div>
-            <h2>Next Steps</h2>
-
-        </div>
-    )
-
-}
+  return (
+    <div>
+      <h2>Next Steps</h2>
+    </div>
+  );
+};

@@ -14,17 +14,13 @@ const Employer = () => {
             <h1 className="sub-menu-header">Employer</h1>
             <ul className="sub-list">
               <Card className="sub-list-item">
-                <CardContent >
-                  <li >
-                    Finding and Training an Employee
-                  </li>
+                <CardContent>
+                  <li>Finding and Training an Employee</li>
                 </CardContent>
               </Card>
               <Card className="sub-list-item">
                 <CardContent>
-                  <li >
-                    Becoming a Partner of the Unemployment Fund
-                  </li>
+                  <li>Becoming a Partner of the Unemployment Fund</li>
                 </CardContent>
               </Card>
             </ul>

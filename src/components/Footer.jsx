@@ -21,7 +21,6 @@ export default function Footer() {
           </div>
         ))}
 
-        
         {/* <div className="footer-item">
           <h2>Unemployment Insurance Fraud</h2>
           <ul className="footer-list">

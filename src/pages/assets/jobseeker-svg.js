@@ -8,7 +8,7 @@ const JobSeekerImage = () => {
       viewBox="0 0 96 96"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      role="img" 
+      role="img"
       aria-labelledby="Job Seekers"
     >
       <path

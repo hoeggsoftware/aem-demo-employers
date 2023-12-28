@@ -7,11 +7,8 @@ import LostMyJob from "./assets/lost-my-job";
 import Benefits from "../components/benefits";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import getPersistedQueries from "@/aem-headless";
 
 const JobSeeker = () => {
-  
-
   return (
     <Layout>
       {/* change sub-menu into a component to make easier to show on lost my job and job search pages */}

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Carousel = () => {
-  const [images, setImages] = useState([])
+  const [images, setImages] = useState([]);
   const settings = {
     dots: true,
     infinite: true,
@@ -18,7 +18,7 @@ const Carousel = () => {
 
   const fetchCarouselImages = () => {
     fetch(
-      "https://publish-p124452-e1227370.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/carousel-images"
+      "https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/carousel-images",
     )
       .then((res) => {
         return res.json();
@@ -30,20 +30,18 @@ const Carousel = () => {
 
   useEffect(() => {
     fetchCarouselImages();
-  }, []); 
+  }, []);
 
   return (
     <div className="slider-container">
       <Slider {...settings}>
-      {images.map((image) => (
-        <div key={image.image.path}>
-          <div>
-            <img src={image.image._publishUrl} width="100%" height="430em"/>
+        {images.map((image) => (
+          <div key={image.image.path}>
+            <div>
+              <img src={image.image._publishUrl} width="100%" height="430em" />
+            </div>
           </div>
-        </div>
-      ))}
-  
-        
+        ))}
       </Slider>
     </div>
   );
@@ -51,12 +49,12 @@ const Carousel = () => {
 
 export default Carousel;
 
-
-
-{/* {sliderItems.map((d) => (
+{
+  /* {sliderItems.map((d) => (
           <div key={d.title} className="">
             <div className="">
               <img src={d.image} alt="" className="slick-image" />
             </div>
           </div>
-        ))} */}
+        ))} */
+}
