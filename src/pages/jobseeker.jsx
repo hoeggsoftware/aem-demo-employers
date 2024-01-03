@@ -4,10 +4,10 @@ import Layout from "@/components/Layout";
 import "./App.css";
 import JobSearch from "./assets/job-search";
 import LostMyJob from "./assets/lost-my-job";
-import Benefits from "../components/jbenefits";
+import Benefits from "../components/job-seeker/jbenefits";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Submenu from "@/components/jsubmenu";
+import Submenu from "@/components/job-seeker/jsubmenu";
 
 // Should we just create a useEffect and prop for the benefit and use the submenu items as the choice for that?
 

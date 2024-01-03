@@ -23,7 +23,7 @@ const Navbar = () => {
   };
   const fetchNavItems = () => {
     fetch(
-      "https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/nav-items",
+      "https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/nav-items"
     )
       .then((res) => {
         return res.json();
@@ -38,9 +38,9 @@ const Navbar = () => {
   }, []);
 
   const findImageUrlByTitle = (title) => {
-    const item = images.find(i => i.title === title);
-    return item ? item.image._publishUrl : '';
-  }
+    const item = images.find((i) => i.title === title);
+    return item ? item.image._publishUrl : "";
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -79,7 +79,10 @@ const Navbar = () => {
           </li>
           <li className="nav-list-item">
             <Link className="nav-link link-dec" href="/employers">
-              <img src={findImageUrlByTitle("Employers and Partners")} alt="Employers" />
+              <img
+                src={findImageUrlByTitle("Employers and Partners")}
+                alt="Employers"
+              />
               EMPLOYERS
             </Link>
           </li>

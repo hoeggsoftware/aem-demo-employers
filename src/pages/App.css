@@ -211,7 +211,6 @@ main {
 }
 
 .sub-list-active {
-  border: 2.5px solid var(--orange);
   text-decoration: underline var(--orange) 3px;
 }
 

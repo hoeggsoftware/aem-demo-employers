@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useState, useEffect } from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -9,13 +8,20 @@ import Typography from "@mui/material/Typography";
 const fetchUrl = process.env.REACT_APP_FETCH_URL;
 
 const Benefits = ({ state, endpoint }) => {
-
   const [benefits, setBenefits] = useState([]);
-  const [page, setPage] = useState('finding-employees')
+  const [page, setPage] = useState("financial-benefits");
+
+  const setFinancialBenefits = () => {
+    setPage("financial-benefits");
+  };
+
+  const setServicesBenefits = () => {
+    setPage("services-and-other-opportunities");
+  };
 
   const fetchBenefits = (e) => {
     fetch(
-      `https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/content-box-by-path;path=/content/dam/aem-demo-employers/en/employers-and-partners/${e}`,
+      `https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/content-box-by-path;path=/content/dam/aem-demo-employers/en/job-seekers/benefits/${e}`
     )
       .then((res) => {
         return res.json();
@@ -30,6 +36,7 @@ const Benefits = ({ state, endpoint }) => {
   useEffect(() => {
     fetchBenefits(endpoint);
   }, [endpoint]);
+  // IN AN ACTUAL APP WE WOULD CACHE THE RESULTS AND CHECK TO SEE IF THEY CHANGED INSTEAD OF CALLING TO THE API EVERYTIME THE PAGE CHANGE
 
   return (
     <div className="container">
