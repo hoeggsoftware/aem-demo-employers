@@ -8,7 +8,7 @@ import CardContent from "@mui/material/CardContent";
 
 const Submenu = ({ onMenuChange }) => {
 
-  const [active, setActive] = useState('lost-my-job');
+  const [active, setActive] = useState('finding-employees');
 
   const handleMenuChange = (menuItem) => {
     setActive(menuItem);
@@ -16,25 +16,19 @@ const Submenu = ({ onMenuChange }) => {
   }
 
     return (
-        <div className="sub-menu">
+      <div className="sub-menu">
         <div className="sub-menu-container">
           <div className="container">
-            <h1 className="sub-menu-header">Job Seekers</h1>
+            <h1 className="sub-menu-header">Employer</h1>
             <ul className="sub-list">
-              <Card className={`sub-list-item hover ${active === 'lost-my-job' ? 'sub-list-active' : ''}`} onClick={() => handleMenuChange('lost-my-job')}>
+              <Card className={`sub-list-item hover ${active === 'finding-employees' ? 'sub-list-active' : ''}`} onClick={() => handleMenuChange('finding-employees')}>
                 <CardContent>
-                  <li>
-                    <LostMyJob />
-                    Lost My Job
-                  </li>
+                  <li>Finding and Training an Employee</li>
                 </CardContent>
               </Card>
-              <Card className={`sub-list-item hover ${active === 'job-search' ? 'sub-list-active' : ''}`} onClick={() => handleMenuChange('job-search')}>
+              <Card className={`sub-list-item hover ${active === 'partners' ? 'sub-list-active' : ''}`} onClick={() => handleMenuChange('partners')}>
                 <CardContent>
-                  <li>
-                    <JobSearch />
-                    Job Search
-                  </li>
+                  <li>Becoming a Partner of the Unemployment Fund</li>
                 </CardContent>
               </Card>
             </ul>

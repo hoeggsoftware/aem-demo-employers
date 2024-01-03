@@ -1,33 +1,33 @@
-import * as React from "react";
+import { useState } from "react";
 import Layout from "@/components/Layout";
 import "./App.css";
+import Submenu from "@/components/esubmenu";
 import Benefits from "../components/ebenefits";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
+
+const endpointMapping = {
+  'finding-employees': 'finding-employees',
+  'partners': 'start-training',
+}
+
+
+
+
 const Employer = () => {
+  const [selectedMenu, setSelectedMenu] = useState('finding-employees');
+  const [endpoint, setEndpoint] = useState(endpointMapping['finding-employees']);
+
+  const handleMenuChange = (menuItem) => {
+    setSelectedMenu(menuItem);
+    setEndpoint(endpointMapping[menuItem]);
+  }
+
   return (
     <Layout>
-      <div className="sub-menu">
-        <div className="sub-menu-container">
-          <div className="container">
-            <h1 className="sub-menu-header">Employer</h1>
-            <ul className="sub-list">
-              <Card className="sub-list-item">
-                <CardContent>
-                  <li>Finding and Training an Employee</li>
-                </CardContent>
-              </Card>
-              <Card className="sub-list-item">
-                <CardContent>
-                  <li>Becoming a Partner of the Unemployment Fund</li>
-                </CardContent>
-              </Card>
-            </ul>
-          </div>
-        </div>
-        <Benefits />
-      </div>
+      <Submenu onMenuChange={handleMenuChange} />
+      <Benefits state={selectedMenu} endpoint={endpoint} />
     </Layout>
   );
 };

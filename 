@@ -1,0 +1,161 @@
+[33mcommit 79461eab56ed1f66b131f37cb24fab7006d44292[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Jan 2 20:42:13 2024 -0600
+
+    updated job-seeker functionality and usestates
+
+[33mcommit 6a67792508ccd49d69c3377a19580085bace4a39[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Thu Dec 28 15:23:05 2023 -0600
+
+    updated nav api and benefits api
+
+[33mcommit 9540d22f2af63f7b34b04a06b09a40f98f713656[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Wed Dec 6 16:08:44 2023 -0600
+
+    improving layout
+
+[33mcommit 2feb9b3f463e32db6ce1500976fd4589a2c384a0[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Wed Dec 6 12:38:58 2023 -0600
+
+    updated location page layout and added cards and functionality to set current office
+
+[33mcommit a7fe226895e99eef348b1fdc4536c34e360227c2[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Dec 5 20:41:19 2023 -0600
+
+    created database for offices and began sections of the webpage
+
+[33mcommit 9f413a723a9b18e39bcae586ab62ce700b415ae7[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Dec 5 13:48:55 2023 -0600
+
+    updating locations page
+
+[33mcommit 847a5ad25c337b7e5c754fc7dd617adb656470f3[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Thu Nov 30 19:11:38 2023 -0600
+
+    fixed layout bug
+
+[33mcommit 1d5453ae48109063434f2f8d8101fc1917e2b7f0[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Thu Nov 30 12:02:45 2023 -0600
+
+    added txt file with plans of creating persisted queries
+
+[33mcommit ea484c53285f9b197fd81b7a5047440cc8b2c32a[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Thu Nov 30 10:47:35 2023 -0600
+
+    updated carousel to dynamic images
+
+[33mcommit 17e64214ea8ed097474f1c9bd0549dc30e854f1d[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Wed Nov 29 14:40:55 2023 -0600
+
+    Used fetch on api to create dynamic content
+
+[33mcommit 5c549ca5a65f2155bb36ebfbb02e86af2fff7130[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Wed Nov 29 11:58:00 2023 -0600
+
+    added use effect to jobseeker and edited AEMHeadless file
+
+[33mcommit fe899321d6d0823a836290d7a3406df0bbe92f01[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Nov 28 12:43:18 2023 -0600
+
+    updated styling of carousel and nav links
+
+[33mcommit d3da4a2d4176e727723760079cacff5ccfcd7654[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Nov 28 02:27:20 2023 -0600
+
+    improved layout of the homescreen pending further updates
+
+[33mcommit c7bec9830ff297e390da544fdf7b92226c18ff4c[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Mon Nov 27 20:45:38 2023 -0600
+
+    Replaced carousel with better functioning one and updated homepage layout
+
+[33mcommit 37fb044adfd5e06d980f71d614225b9fe26db02f[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Mon Nov 27 14:17:11 2023 -0600
+
+    fixed issues with carousel component and initialized mock up folder and files
+
+[33mcommit 1637a94d5edb370d7dc5732492348e7fece4f175[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Mon Nov 27 11:37:25 2023 -0600
+
+    adding carousel component
+
+[33mcommit 8c5e998359c8fc3eeac8f5c9d194608c6a32b417[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Sat Nov 25 11:15:02 2023 -0600
+
+    added navitems file to handle import of navigation menu items.
+
+[33mcommit 7d2f0d001caa7ba635a355c605daee87a4a1433d[m[33m ([m[1;33mtag: 0.0[m[33m)[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Fri Nov 24 11:48:15 2023 -0600
+
+    updated benefits js and node and next versioning, added docker file.
+
+[33mcommit a79610730de130b0715b524397940a5556ad6e1e[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Nov 21 16:55:46 2023 -0600
+
+    added footercontent to dynamically create benefits.jsx items
+
+[33mcommit 37d208f8843d958e5a7fd5d39b3534fb896170f4[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Nov 21 15:12:33 2023 -0600
+
+    started footer component
+
+[33mcommit 5d60f9495a7bad939b388be2773619b97d967a4e[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Nov 21 13:04:32 2023 -0600
+
+    added SVGs
+
+[33mcommit e6af2d007d9d995167bb9dfadbb34c2c091471bd[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Nov 21 10:06:57 2023 -0600
+
+    updated navbar
+
+[33mcommit f314c4c28317458a09fbe4e7d04c0628db0879f3[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Nov 21 09:27:35 2023 -0600
+
+    added svg images to nav-items
+
+[33mcommit be7806e065a5fd128251ff355623745680ae2801[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Tue Nov 21 07:45:07 2023 -0600
+
+    Added benefits to job seeker page
+
+[33mcommit 2aa397f7b95f0af7360df3d05fa577e61b7f76dc[m
+Author: youngderrick82 <youngderrick82@gmail.com>
+Date:   Mon Nov 20 17:08:48 2023 -0600
+
+    updated job seeker page
+
+[33mcommit 042fe16f9fac0f6837b6b0060add7ef3f23009a1[m
+Author: Derrick Young <91026710+youngderrick82@users.noreply.github.com>
+Date:   Mon Nov 20 16:33:41 2023 -0600
+
+    Initial commit
+
+[33mcommit 5cf21704bcb294d3486e34a679ecbcaab8be88a7[m
+Author: Derrick Young <91026710+youngderrick82@users.noreply.github.com>
+Date:   Sun Nov 19 22:34:03 2023 -0600
+
+    Initial commit from Create Next App
