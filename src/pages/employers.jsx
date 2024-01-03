@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "@/components/Layout";
 import "./App.css";
-import Benefits from "../components/benefits";
+import Benefits from "../components/ebenefits";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 

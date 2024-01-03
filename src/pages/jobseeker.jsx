@@ -4,40 +4,32 @@ import Layout from "@/components/Layout";
 import "./App.css";
 import JobSearch from "./assets/job-search";
 import LostMyJob from "./assets/lost-my-job";
-import Benefits from "../components/benefits";
+import Benefits from "../components/jbenefits";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import Submenu from "@/components/jsubmenu";
+
+// Should we just create a useEffect and prop for the benefit and use the submenu items as the choice for that?
+
+const endpointMapping = {
+  'lost-my-job': 'financial-benefits',
+  'job-search': 'services-and-other-opportunities',
+}
 
 const JobSeeker = () => {
+  const [selectedMenu, setSelectedMenu] = useState('financial-benefits');
+  const [endpoint, setEndpoint] = useState(endpointMapping['lost-my-job']);
+  const [page, setPage] = useState('financial-benefits');
+
+  const handleMenuChange = (menuItem) => {
+    setSelectedMenu(menuItem);
+    setEndpoint(endpointMapping[menuItem]);
+  }
+
   return (
     <Layout>
-      {/* change sub-menu into a component to make easier to show on lost my job and job search pages */}
-      <div className="sub-menu">
-        <div className="sub-menu-container">
-          <div className="container">
-            <h1 className="sub-menu-header">Job Seekers</h1>
-            <ul className="sub-list">
-              <Card className="sub-list-item">
-                <CardContent>
-                  <li>
-                    <LostMyJob />
-                    Lost My Job
-                  </li>
-                </CardContent>
-              </Card>
-              <Card className="sub-list-item">
-                <CardContent>
-                  <li>
-                    <JobSearch />
-                    Job Search
-                  </li>
-                </CardContent>
-              </Card>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <Benefits />
+      <Submenu onMenuChange={handleMenuChange} />
+      <Benefits state={selectedMenu} endpoint={endpoint} />
     </Layout>
   );
 };

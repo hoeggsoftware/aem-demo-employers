@@ -210,6 +210,10 @@ main {
 .accordion-container {
 }
 
+.hover:hover {
+  cursor: pointer;
+}
+
 /* Job Seeker Page Styles  */
 
 .benefits-header {
