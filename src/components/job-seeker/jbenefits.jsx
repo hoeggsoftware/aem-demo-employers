@@ -7,6 +7,13 @@ import Typography from "@mui/material/Typography";
 
 const fetchUrl = process.env.REACT_APP_FETCH_URL;
 
+const extMapping = {
+  docx: "Word Document",
+  pdf: "PDF Document",
+  csv: "Excel Document",
+  rtf: "Rich Text Format",
+};
+
 const Benefits = ({ state, endpoint }) => {
   const [benefits, setBenefits] = useState([]);
   const [page, setPage] = useState("financial-benefits");
@@ -21,7 +28,7 @@ const Benefits = ({ state, endpoint }) => {
 
   const fetchBenefits = (e) => {
     fetch(
-      `https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/content-box-by-path;path=/content/dam/aem-demo-employers/en/job-seekers/benefits/${e}`
+      `https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/job-seeker-benefits;path=/content/dam/aem-demo-employers/en/job-seekers/benefits/${e}`
     )
       .then((res) => {
         return res.json();
@@ -32,6 +39,8 @@ const Benefits = ({ state, endpoint }) => {
 
     console.log(benefits);
   };
+
+  const hostUrl = "https://publish-p127513-e1240269.adobeaemcloud.com/";
 
   useEffect(() => {
     fetchBenefits(endpoint);
@@ -53,6 +62,26 @@ const Benefits = ({ state, endpoint }) => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>{benefit.text.plaintext}</Typography>
+              <ul className="file-list">
+                {benefit.files.map((f) => (
+                  <li key={f._path}>
+                    {f.file && (
+                      <a
+                        className="file-list-item"
+                        href={f.file._publishUrl}
+                        target="_blank"
+                      >
+                        {f.fileName}
+                        {" ("}
+                        {f.extension}
+                        {", "}
+                        {f.size}
+                        {")"}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </AccordionDetails>
           </Accordion>
         ))}

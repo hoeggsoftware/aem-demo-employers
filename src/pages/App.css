@@ -266,6 +266,27 @@ main {
   margin-left: 10px;
 }
 
+/* Benefits */
+
+.file-list {
+  list-style: none;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  margin: 10px auto;
+  text-align: center;
+  width: 50%;
+}
+
+.file-list-item:link {
+  color: black;
+  margin: none;
+  padding: none;
+}
+
+.file-list-item {
+  text-decoration: none;
+}
+
 /* Footer */
 
 footer {
