@@ -61,8 +61,9 @@ const LocationCards = () => {
             {offices
               .filter((office) => office.name === activeOffice)
               .map((office, index) => (
-                  <div key={index}>
-                  <h3 className="location-header">{office.name}</h3>
+                  <div className="location-info-container" key={index}>
+                  <div className="location-contact-info">
+                  <h2 className="location-header">{office.name}</h2>
 
                   <p className="location-phone">
                     <strong className="location-bold">PHONE: </strong>{" "}
@@ -82,7 +83,7 @@ const LocationCards = () => {
                     </strong>{" "}
                     {office.openingHours.markdown}
                   </p>
-               
+                </div>
                 <h2 className="contacts-header">Contacts</h2>
                 <div className="accordion-container">
                   {office.contacts.map((contact) => (

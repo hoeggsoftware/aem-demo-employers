@@ -14,9 +14,15 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Link from "next/link";
 
+const navMapping = {
+  "Employers and Partners": "/employers",
+  "Job Seekers": "/jobseeker",
+  Locations: "/locations",
+};
+
 const Navbar = () => {
   const [language, setLanguage] = useState("ENGLISH");
-  const [images, setImages] = useState([]);
+  const [navItems, setNavItems] = useState([]);
 
   const handleChange = (event) => {
     setLanguage(event.target.value);
@@ -29,7 +35,7 @@ const Navbar = () => {
         return res.json();
       })
       .then((d) => {
-        setImages(d.data.navigationElementList.items);
+        setNavItems(d.data.navigationElementList.items);
       });
   };
 
@@ -38,7 +44,7 @@ const Navbar = () => {
   }, []);
 
   const findImageUrlByTitle = (title) => {
-    const item = images.find((i) => i.title === title);
+    const item = navItems.find((i) => i.title === title);
     return item ? item.image._publishUrl : "";
   };
 
@@ -69,7 +75,7 @@ const Navbar = () => {
           </FormControl>
         </Toolbar>
       </AppBar>
-      <nav>
+      {/* <nav>
         <ul className="nav-list">
           <li className="nav-list-item">
             <Link className="nav-link link-dec" href="/jobseeker">
@@ -93,6 +99,16 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+      </nav> */}
+      <nav className="nav-list">
+        {navItems.map((item) => (
+          <li key={navItems.title} className="nav-list-item">
+            <Link className="nav-link link-dec" href={navMapping[item.title]}>
+              <img src={item.image._publishUrl} />
+              {item.title.toUpperCase()}
+            </Link>
+          </li>
+        ))}
       </nav>
     </Box>
   );

@@ -8,7 +8,7 @@ import CardContent from "@mui/material/CardContent";
 
 const endpointMapping = {
   "finding-employees": "finding-employees",
-  partners: "start-training",
+  "partners": "start-training",
 };
 
 const Employer = () => {
