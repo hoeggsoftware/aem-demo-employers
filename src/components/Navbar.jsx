@@ -20,16 +20,23 @@ const navMapping = {
   Locations: "/locations",
 };
 
+const langMapping = {
+  "ENGLISH": "en",
+  "SPANISH": "es",
+  "RUSSIAN": "ru"
+}
+
 const Navbar = () => {
-  const [language, setLanguage] = useState("ENGLISH");
+  const [lang, setLang] = useState(langMapping["ENGLISH"]);
   const [navItems, setNavItems] = useState([]);
 
   const handleChange = (event) => {
-    setLanguage(event.target.value);
+    setLang(event.target.value);
+    // Create a test element to test whether this is pulling the lang change properly.
   };
   const fetchNavItems = () => {
     fetch(
-      "https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/nav-items"
+      "https://publish-p128728-e1256872.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/nav-items"
     )
       .then((res) => {
         return res.json();

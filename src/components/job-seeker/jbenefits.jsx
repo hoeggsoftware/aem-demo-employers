@@ -28,7 +28,7 @@ const Benefits = ({ state, endpoint }) => {
 
   const fetchBenefits = (e) => {
     fetch(
-      `https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/job-seeker-benefits;path=/content/dam/aem-demo-employers/en/job-seekers/benefits/${e}`
+      `https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/benefits;path=/content/dam/aem-demo-employers/en/job-seekers/benefits/${e}`
     )
       .then((res) => {
         return res.json();
