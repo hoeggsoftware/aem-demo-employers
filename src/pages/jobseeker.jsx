@@ -8,23 +8,24 @@ import Benefits from "../components/job-seeker/jbenefits";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Submenu from "@/components/job-seeker/jsubmenu";
+import { useLanguage } from "@/components/LanguageContext";
 
 // Should we just create a useEffect and prop for the benefit and use the submenu items as the choice for that?
 
 const endpointMapping = {
-  'lost-my-job': 'financial-benefits',
-  'job-search': 'services-and-other-opportunities',
-}
+  "lost-my-job": "financial-benefits",
+  "job-search": "services-and-other-opportunities",
+};
 
 const JobSeeker = () => {
-  const [selectedMenu, setSelectedMenu] = useState('financial-benefits');
-  const [endpoint, setEndpoint] = useState(endpointMapping['lost-my-job']);
-  const [page, setPage] = useState('financial-benefits');
+  const { selectedLang, handleLangChange } = useLanguage();
+  const [selectedMenu, setSelectedMenu] = useState("financial-benefits");
+  const [endpoint, setEndpoint] = useState(endpointMapping["lost-my-job"]);
 
   const handleMenuChange = (menuItem) => {
     setSelectedMenu(menuItem);
     setEndpoint(endpointMapping[menuItem]);
-  }
+  };
 
   return (
     <Layout>

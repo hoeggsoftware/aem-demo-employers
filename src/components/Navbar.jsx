@@ -13,6 +13,7 @@ import EmployerImage from "@/pages/assets/employer-svg";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Link from "next/link";
+import { useLanguage } from "./LanguageContext";
 
 const navMapping = {
   "Employers and Partners": "/employers",
@@ -27,16 +28,22 @@ const langMapping = {
 }
 
 const Navbar = () => {
+  const { selectedLang, handleLangChange } = useLanguage();
   const [lang, setLang] = useState(langMapping["ENGLISH"]);
+  const [displayLang, setDisplayLang] = useState("ENGLISH")
   const [navItems, setNavItems] = useState([]);
 
+  const url = process.env.NEXT_PUBLIC_FETCH_URL;
+
   const handleChange = (event) => {
-    setLang(event.target.value);
-    // Create a test element to test whether this is pulling the lang change properly.
+    const selectedLang = event.target.value
+    setLang(selectedLang);
+    handleLangChange(selectedLang);
+    setDisplayLang(selectedLang);
   };
   const fetchNavItems = () => {
     fetch(
-      "https://publish-p128728-e1256872.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/nav-items"
+      `${url}nav-items`
     )
       .then((res) => {
         return res.json();
@@ -70,14 +77,13 @@ const Navbar = () => {
             <Select
               labelId="language-selector"
               id="demo-simple-select"
-              value={language}
+              value={displayLang}
               label="LANGUAGE"
               onChange={handleChange}
               variant="standard"
             >
               <MenuItem value={"ENGLISH"}>ENGLISH</MenuItem>
               <MenuItem value={"SPANISH"}>SPANISH</MenuItem>
-              <MenuItem value={"RUSSIAN"}>RUSSIAN</MenuItem>
             </Select>
           </FormControl>
         </Toolbar>

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { LanguageProvider, useLanguage } from "./LanguageContext";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageProps }) => {
+  const [selectedLang, setSelectedLang] = useState("ENGLISH");
+
+  const handleLangChange = (lang) => {
+    setSelectedLang(lang);
+  };
   const layoutStyle = {
     display: "grid",
     gridTemplateRows: "auto 1fr auto",
@@ -10,11 +16,13 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div style={layoutStyle}>
-      <Navbar />
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div style={layoutStyle}>
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 };
 

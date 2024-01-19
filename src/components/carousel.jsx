@@ -16,14 +16,16 @@ const Carousel = () => {
     autoplaySpeed: 5000,
   };
 
+  const url = process.env.NEXT_PUBLIC_FETCH_URL;
+
   const fetchCarouselImages = () => {
-    fetch(
-      "https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/carousel-images",
-    )
+    fetch(`${url}carousel-images`)
       .then((res) => {
+        console.log("url: ", url);
         return res.json();
       })
       .then((d) => {
+        console.log(d.data)
         setImages(d.data.carouselElementList.items);
       });
   };
