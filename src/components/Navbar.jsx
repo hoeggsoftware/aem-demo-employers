@@ -4,14 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import { FormControl, Select, MenuItem, InputLabel } from "@mui/material";
-import JobSeekerImage from "@/pages/assets/jobseeker-svg";
-import EmployerImage from "@/pages/assets/employer-svg";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import Link from "next/link";
 import { useLanguage } from "./LanguageContext";
 
@@ -22,28 +15,34 @@ const navMapping = {
 };
 
 const langMapping = {
-  "ENGLISH": "en",
-  "SPANISH": "es",
-  "RUSSIAN": "ru"
-}
+  ENGLISH: "en",
+  SPANISH: "es",
+  RUSSIAN: "ru",
+};
+
+const langCodeMapping = {
+  en: "ENGLISH",
+  es: "SPANISH",
+  ru: "RUSSIAN",
+};
 
 const Navbar = () => {
   const { selectedLang, handleLangChange } = useLanguage();
   const [lang, setLang] = useState(langMapping["ENGLISH"]);
-  const [displayLang, setDisplayLang] = useState("ENGLISH")
+  const [displayLang, setDisplayLang] = useState("ENGLISH");
   const [navItems, setNavItems] = useState([]);
 
   const url = process.env.NEXT_PUBLIC_FETCH_URL;
 
   const handleChange = (event) => {
-    const selectedLang = event.target.value
+    const selectedLang = langMapping[event.target.value];
     setLang(selectedLang);
     handleLangChange(selectedLang);
-    setDisplayLang(selectedLang);
+    setDisplayLang(event.target.value);
   };
   const fetchNavItems = () => {
     fetch(
-      `${url}nav-items`
+      `${url}nav-items;path=/content/dam/aem-demo-employers/${selectedLang}`
     )
       .then((res) => {
         return res.json();
@@ -54,13 +53,23 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    const storedLang = localStorage.getItem("selectedLang");
+    if (storedLang) {
+      setLang(langCodeMapping[storedLang]);
+      setDisplayLang(storedLang);
+      handleLangChange(storedLang);
+    } else {
+      setLang(langMapping[storedLang]);
+      setDisplayLang("ENGLISH");
+      handleLangChange("ENGLISH");
+    }
+
     fetchNavItems();
   }, []);
 
-  const findImageUrlByTitle = (title) => {
-    const item = navItems.find((i) => i.title === title);
-    return item ? item.image._publishUrl : "";
-  };
+  useEffect(() => {
+    fetchNavItems();
+  }, [selectedLang]);
 
   return (
     <Box sx={{ flexGrow: 1 }}>

@@ -5,10 +5,12 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
+import { useLanguage } from "../LanguageContext";
 
 const fetchUrl = process.env.REACT_APP_FETCH_URL;
 
-const Benefits = ({ state, endpoint, lang }) => {
+const Benefits = ({ state, endpoint }) => {
+  const { selectedLang } = useLanguage();
   const [benefits, setBenefits] = useState([]);
   const [page, setPage] = useState("finding-employees");
 
@@ -32,9 +34,16 @@ const Benefits = ({ state, endpoint, lang }) => {
     fetchBenefits(endpoint);
   }, [endpoint]);
 
+
+  useEffect(() => {
+    fetchBenefits(endpoint);
+  }, [selectedLang]);
+  
+
   return (
     <div className="container">
       <h2 className="benefits-header">Benefits</h2>
+      <h2>{selectedLang}</h2>
       <div className="accordion-container">
         {benefits.map((benefit, index) => (
           <Accordion key={index}>

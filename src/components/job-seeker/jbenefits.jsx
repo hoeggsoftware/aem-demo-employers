@@ -32,7 +32,7 @@ const Benefits = ({ state, endpoint }) => {
 
   const fetchBenefits = (e) => {
     fetch(
-      `${url}benefits;path=/content/dam/aem-demo-employers/en/job-seekers/benefits/${e}`
+      `${url}benefits;path=/content/dam/aem-demo-employers/${selectedLang}/job-seekers/benefits/${e}`
     )
       .then((res) => {
         return res.json();
@@ -47,50 +47,57 @@ const Benefits = ({ state, endpoint }) => {
   useEffect(() => {
     fetchBenefits(endpoint);
   }, [endpoint]);
-  // IN AN ACTUAL APP WE WOULD CACHE THE RESULTS AND CHECK TO SEE IF THEY CHANGED INSTEAD OF CALLING TO THE API EVERYTIME THE PAGE CHANGE
+
+  useEffect(() => {
+    fetchBenefits(endpoint);
+  }, [selectedLang]);
+
+  // IN AN ACTUAL APP WE WOULD CACHE THE RESULTS.
 
   return (
     console.log(`language: ${selectedLang}`),
-    <div className="container">
-      <h2 className="benefits-header">Benefits</h2>
-      <h2>{selectedLang}</h2>
-      <div className="accordion-container">
-        {benefits.map((benefit) => (
-          <Accordion key={benefit.title}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>{benefit.title}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{benefit.text.plaintext}</Typography>
-              <ul className="file-list">
-                {benefit.files.map((f) => (
-                  <li key={f._path}>
-                    {f.file && (
-                      <a
-                        className="file-list-item"
-                        href={f.file._publishUrl}
-                        target="_blank"
-                      >
-                        {f.fileName}
-                        {" ("}
-                        {f.extension}
-                        {", "}
-                        {f.size}
-                        {")"}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </AccordionDetails>
-          </Accordion>
-        ))}
+    (
+      <div className="container">
+        <h2 className="benefits-header">Benefits</h2>
+        <h2>{selectedLang}</h2>
+        <div className="accordion-container">
+          {benefits.map((benefit) => (
+            <Accordion key={benefit.title}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>{benefit.title}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>{benefit.text.plaintext}</Typography>
+                <ul className="file-list">
+                  {benefit.files.map((f) => (
+                    <li key={f._path}>
+                      {f.file && (
+                        <a
+                          className="file-list-item"
+                          href={f.file._publishUrl}
+                          target="_blank"
+                        >
+                          {f.fileName}
+                          {" ("}
+                          {f.extension}
+                          {", "}
+                          {f.size}
+                          {")"}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </div>
       </div>
-    </div>
+    )
   );
 };
 

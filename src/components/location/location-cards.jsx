@@ -5,14 +5,34 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useLanguage } from "../LanguageContext";
+
+const locationContent = {
+  en: {
+    phoneLabel: "PHONE",
+    emailLabel: "EMAIL",
+    addressLabel: "ADDRESS",
+    hoursLabel: "Hours of Operations",
+    contactsHeader: "Contacts",
+  },
+  es: {
+    phoneLabel: "TELÉFONO",
+    emailLabel: "CORREO ELECTRÓNICO",
+    addressLabel: "DIRECCIÓN",
+    hoursLabel: "Horario de operaciones",
+    contactsHeader: "Contactos",
+  },
+};
 
 const LocationCards = () => {
+  const { selectedLang } = useLanguage();
   const [offices, setOffices] = useState([]);
   const [activeOffice, setActiveOffice] = useState("Office Name");
+
+  const url = process.env.NEXT_PUBLIC_FETCH_URL;
+
   const fetchOffices = () => {
-    fetch(
-      "https://publish-p127513-e1240269.adobeaemcloud.com/graphql/execute.json/aem-demo-employers/office-locations"
-    )
+    fetch(`${url}offices`)
       .then((res) => {
         return res.json();
         console.log(res.json());
@@ -33,10 +53,22 @@ const LocationCards = () => {
     updateOffice();
   }, [activeOffice]);
 
-  const setContactPhone = (contact) => {
-    return contact.phone == null ? "" : <Typography><strong>PHONE:</strong>{" "}{contact.phone}</Typography>
-  }
+  const translate = (key) => {
+    return locationContent[selectedLang][key] || key;
+  };
 
+  const setContactPhone = (contact) => {
+    return contact.phone == null ? (
+      ""
+    ) : (
+      <Typography>
+        <strong>{translate("phoneLabel")}:</strong> {contact.phone}
+      </Typography>
+    );
+  };
+  {
+    translate("");
+  }
   return (
     <div className="container">
       <div className="locations-container">
@@ -49,7 +81,7 @@ const LocationCards = () => {
                   className="location-item"
                   onClick={() => setActiveOffice(office.name)}
                   key={office.phone}
-                  >
+                >
                   {office.name}
                 </li>
               ))}
@@ -61,50 +93,65 @@ const LocationCards = () => {
             {offices
               .filter((office) => office.name === activeOffice)
               .map((office, index) => (
-                  <div className="location-info-container" key={index}>
+                <div className="location-info-container" key={index}>
                   <div className="location-contact-info">
-                  <h2 className="location-header">{office.name}</h2>
+                    <h2 className="location-header">{office.name}</h2>
 
-                  <p className="location-phone">
-                    <strong className="location-bold">PHONE: </strong>{" "}
-                    {office.phone}
-                  </p>
-                  <p className="location-email">
-                    <strong className="location-bold">EMAIL:</strong>{" "}
-                    {office.email}
-                  </p>
-                  <p className="location-address">
-                    <strong className="location-bold">ADDRESS:</strong>{" "}
-                    {office.address}
-                  </p>
-                  <p className="location-hours">
-                    <strong className="location-bold">
-                      Hours of Operations:
-                    </strong>{" "}
-                    {office.openingHours.markdown}
-                  </p>
-                </div>
-                <h2 className="contacts-header">Contacts</h2>
-                <div className="accordion-container">
-                  {office.contacts.map((contact) => (
+                    <p className="location-phone">
+                      <strong className="location-bold">
+                        {translate("phoneLabel")}:{" "}
+                      </strong>{" "}
+                      {office.phone}
+                    </p>
+                    <p className="location-email">
+                      <strong className="location-bold">
+                        {translate("emailLabel")}:
+                      </strong>{" "}
+                      {office.email}
+                    </p>
+                    <p className="location-address">
+                      <strong className="location-bold">
+                        {translate("addressLabel")}:
+                      </strong>{" "}
+                      {office.address}
+                    </p>
+                    <p className="location-hours">
+                      <strong className="location-bold">
+                        {translate("hoursLabel")}:
+                      </strong>{" "}
+                      {office.openingHours.markdown}
+                    </p>
+                  </div>
+                  <h2 className="contacts-header">Contacts</h2>
+                  <div className="accordion-container">
+                    {office.contacts.map((contact) => (
                       <Accordion key={contact.name}>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        <AccordionSummary
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1a-content"
+                          id="panel1a-header"
                         >
-                        <Typography>{contact.name}{" "}{'('}<strong><em>{contact.position}</em></strong>{')'}</Typography>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        {setContactPhone(contact)}
-                        {/* <Typography><strong>PHONE:</strong>{" "}{contact.phone}</Typography> */}
-                        {/* contact.phone ? <Typography><strong>PHONE:</strong>{" "}{contact.phone}</Typography> : " " */}
-                        <Typography><strong>EMAIL:</strong>{" "}{contact.email}</Typography>
-                      </AccordionDetails>
-                    </Accordion>
-                  ))}
+                          <Typography>
+                            {contact.name} {"("}
+                            <strong>
+                              <em>{contact.position}</em>
+                            </strong>
+                            {")"}
+                          </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          {setContactPhone(contact)}
+                          {/* <Typography><strong>PHONE:</strong>{" "}{contact.phone}</Typography> */}
+                          {/* contact.phone ? <Typography><strong>PHONE:</strong>{" "}{contact.phone}</Typography> : " " */}
+                          <Typography>
+                            <strong>{translate("emailLabel")}:</strong>{" "}
+                            {contact.email}
+                          </Typography>
+                        </AccordionDetails>
+                      </Accordion>
+                    ))}
+                  </div>
                 </div>
-              </div>
               ))}
           </Card>
         </div>
