@@ -262,14 +262,23 @@ main {
   cursor: pointer;
 }
 
+.location-item-active {
+  border: .5px solid black;
+  border-left: 6px solid;
+  border-color: var(--orange)
+}
+
 .active-item {
   border-left: 6px solid var(--orange);
 }
 
+
+
 .location-info-card {
   width: 50rem;
-  height: 100%;
+  height: auto;
   margin-top: 20%;
+  margin-bottom: 15%;
   margin-left: 10px;
   box-shadow: 0px 0px 50px .5px grey;
 }

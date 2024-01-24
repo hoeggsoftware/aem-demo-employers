@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { LanguageProvider, useLanguage } from "./LanguageContext";
+import dynamic from "next/dynamic";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -15,10 +16,13 @@ const Layout = ({ children, pageProps }) => {
     minHeight: "100vh",
   };
 
+  const initialLang = selectedLang || "ENGLISH";
+  const NoSSR = dynamic(() => import('./Navbar'), { ssr: false })
+
   return (
     <LanguageProvider>
       <div style={layoutStyle}>
-        <Navbar />
+        <NoSSR initialState={{ selectedLang: initialLang, handleLangChange }} />
         {children}
         <Footer />
       </div>

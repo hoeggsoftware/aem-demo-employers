@@ -12,6 +12,9 @@ const navMapping = {
   "Employers and Partners": "/employers",
   "Job Seekers": "/jobseeker",
   Locations: "/locations",
+  "Empleadores y socios": "/employers",
+  "solicitantes de empleo": "/jobseeker",
+  Ubicaciones: "/locations",
 };
 
 const langMapping = {
@@ -26,9 +29,9 @@ const langCodeMapping = {
   ru: "RUSSIAN",
 };
 
-const Navbar = () => {
+const Navbar = ({ initialState }) => {
   const { selectedLang, handleLangChange } = useLanguage();
-  const [lang, setLang] = useState(langMapping["ENGLISH"]);
+  const [lang, setLang] = useState(initialState.selectedLang);
   const [displayLang, setDisplayLang] = useState("ENGLISH");
   const [navItems, setNavItems] = useState([]);
 
@@ -48,7 +51,11 @@ const Navbar = () => {
         return res.json();
       })
       .then((d) => {
-        setNavItems(d.data.navigationElementList.items);
+        const sortedNavItems = d.data.navigationElementList.items.sort(
+          (a, b) => a.orderNumber - b.orderNumber
+        );
+        setNavItems(sortedNavItems);
+        console.log(sortedNavItems);
       });
   };
 
@@ -86,7 +93,7 @@ const Navbar = () => {
             <Select
               labelId="language-selector"
               id="demo-simple-select"
-              value={displayLang}
+              value={langCodeMapping[selectedLang]}
               label="LANGUAGE"
               onChange={handleChange}
               variant="standard"
@@ -123,10 +130,14 @@ const Navbar = () => {
         </ul>
       </nav> */}
       <nav className="nav-list">
-        {navItems.map((item) => (
-          <li key={navItems.title} className="nav-list-item">
-            <Link className="nav-link link-dec" href={navMapping[item.title]}>
-              <img src={item.image._publishUrl} />
+        {navItems.map((item, index) => (
+          <li key={item.title} className="nav-list-item">
+            <Link
+              key={index}
+              className="nav-link link-dec"
+              href={navMapping[item.title]}
+            >
+              <img key={index} src={item.image._publishUrl} />
               {item.title.toUpperCase()}
             </Link>
           </li>

@@ -59,7 +59,6 @@ const Benefits = ({ state, endpoint }) => {
     (
       <div className="container">
         <h2 className="benefits-header">Benefits</h2>
-        <h2>{selectedLang}</h2>
         <div className="accordion-container">
           {benefits.map((benefit) => (
             <Accordion key={benefit.title}>

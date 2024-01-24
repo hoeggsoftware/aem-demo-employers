@@ -78,7 +78,7 @@ const LocationCards = () => {
             <ul>
               {offices.map((office) => (
                 <li
-                  className="location-item"
+                  className={`location-item ${activeOffice == office.name ? "location-item-active" : ""}`}
                   onClick={() => setActiveOffice(office.name)}
                   key={office.phone}
                 >
