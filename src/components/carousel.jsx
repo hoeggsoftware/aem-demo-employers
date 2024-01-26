@@ -20,14 +20,8 @@ const Carousel = () => {
 
   const fetchCarouselImages = () => {
     fetch(`${url}carousel-images`)
-      .then((res) => {
-        console.log("url: ", url);
-        return res.json();
-      })
-      .then((d) => {
-        console.log(d.data)
-        setImages(d.data.carouselElementList.items);
-      });
+      .then((res) => res.json())
+      .then((d) => setImages(d.data.carouselElementList.items));
   };
 
   useEffect(() => {
