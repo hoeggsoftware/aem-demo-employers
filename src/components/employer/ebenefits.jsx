@@ -18,7 +18,7 @@ const Benefits = ({ state, endpoint }) => {
 
   const fetchBenefits = (e) => {
     fetch(
-      `${url}benefits;path=/content/dam/aem-demo-employers/en/employers-and-partners/${e}`
+      `${url}benefits;path=/content/dam/aem-demo-employers/en/employers-and-partners/${e}`,
     )
       .then((res) => {
         return res.json();
@@ -34,11 +34,9 @@ const Benefits = ({ state, endpoint }) => {
     fetchBenefits(endpoint);
   }, [endpoint]);
 
-
   useEffect(() => {
     fetchBenefits(endpoint);
   }, [selectedLang]);
-  
 
   return (
     <div className="container">
@@ -56,25 +54,29 @@ const Benefits = ({ state, endpoint }) => {
             <AccordionDetails>
               <Typography>{benefit.text.plaintext}</Typography>
               <ul className="file-list">
-                {benefit.files.map((f) => (
-                  console.log(f),
-                  <li key={f._path}>
-                    {f.file && (
-                      <a
-                        className="file-list-item"
-                        href={f.file._publishUrl}
-                        target="_blank"
-                      >
-                        {f.fileName}
-                        {" ("}
-                        {f.extension}
-                        {", "}
-                        {f.size}
-                        {")"}
-                      </a>
-                    )}
-                  </li>
-                ))}
+                {benefit.files.map(
+                  (f) => (
+                    console.log(f),
+                    (
+                      <li key={f._path}>
+                        {f.file && (
+                          <a
+                            className="file-list-item"
+                            href={f.file._publishUrl}
+                            target="_blank"
+                          >
+                            {f.fileName}
+                            {" ("}
+                            {f.extension}
+                            {", "}
+                            {f.size}
+                            {")"}
+                          </a>
+                        )}
+                      </li>
+                    )
+                  ),
+                )}
               </ul>
             </AccordionDetails>
           </Accordion>

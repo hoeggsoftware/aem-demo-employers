@@ -1,6 +1,6 @@
 {
   "name": "unemployment-demo-site",
-  "version": "0.1.0",
+  "version": "0.7.0",
   "private": true,
   "proxy": "http://publish-p124452-e1227370.adobeaemcloud.com",
   "scripts": {
@@ -28,13 +28,6 @@
     "swiper": "^11.0.5"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.1.0",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "14.0.3",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-next": "^0.0.0",
-    "eslint-plugin-prettier": "^5.1.2",
-    "eslint-plugin-react": "^7.33.2",
     "prettier": "3.1.1"
   }
 }

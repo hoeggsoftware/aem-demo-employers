@@ -8,13 +8,13 @@ import CardContent from "@mui/material/CardContent";
 
 const endpointMapping = {
   "finding-employees": "finding-employees",
-  "partners": "start-training",
+  partners: "start-training",
 };
 
 const Employer = () => {
   const [selectedMenu, setSelectedMenu] = useState("finding-employees");
   const [endpoint, setEndpoint] = useState(
-    endpointMapping["finding-employees"]
+    endpointMapping["finding-employees"],
   );
 
   const handleMenuChange = (menuItem) => {

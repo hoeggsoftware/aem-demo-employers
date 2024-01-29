@@ -45,14 +45,14 @@ const Navbar = ({ initialState }) => {
   };
   const fetchNavItems = () => {
     fetch(
-      `${url}nav-items;path=/content/dam/aem-demo-employers/${selectedLang}`
+      `${url}nav-items;path=/content/dam/aem-demo-employers/${selectedLang}`,
     )
       .then((res) => {
         return res.json();
       })
       .then((d) => {
         const sortedNavItems = d.data.navigationElementList.items.sort(
-          (a, b) => a.orderNumber - b.orderNumber
+          (a, b) => a.orderNumber - b.orderNumber,
         );
         setNavItems(sortedNavItems);
         console.log(sortedNavItems);

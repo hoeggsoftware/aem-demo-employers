@@ -32,7 +32,7 @@ const Benefits = ({ state, endpoint }) => {
 
   const fetchBenefits = (e) => {
     fetch(
-      `${url}benefits;path=/content/dam/aem-demo-employers/${selectedLang}/job-seekers/benefits/${e}`
+      `${url}benefits;path=/content/dam/aem-demo-employers/${selectedLang}/job-seekers/benefits/${e}`,
     )
       .then((res) => {
         return res.json();

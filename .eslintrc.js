@@ -8,6 +8,7 @@ module.exports = {
     "plugin:react/all",
     "plugin:prettier/recommended",
     "plugin:@next/next/recommended",
+    "plugin:react/jsx-runtime",
   ],
   overrides: [
     {
@@ -26,6 +27,6 @@ module.exports = {
   },
   plugins: ["react", "prettier"],
   rules: {
-    "prettier/prettier": "error",
+    "prettier/prettier": "off",
   },
 };

@@ -17,7 +17,7 @@ const Layout = ({ children, pageProps }) => {
   };
 
   const initialLang = selectedLang || "ENGLISH";
-  const NoSSR = dynamic(() => import('./Navbar'), { ssr: false })
+  const NoSSR = dynamic(() => import("./Navbar"), { ssr: false });
 
   return (
     <LanguageProvider>

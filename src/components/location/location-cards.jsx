@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, Typography } from "@mui/material";
-import Offices from "@/components/mockups/offices";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -78,7 +77,9 @@ const LocationCards = () => {
             <ul>
               {offices.map((office) => (
                 <li
-                  className={`location-item ${activeOffice == office.name ? "location-item-active" : ""}`}
+                  className={`location-item ${
+                    activeOffice == office.name ? "location-item-active" : ""
+                  }`}
                   onClick={() => setActiveOffice(office.name)}
                   key={office.phone}
                 >
