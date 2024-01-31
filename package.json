@@ -2,11 +2,11 @@
   "name": "unemployment-demo-site",
   "version": "0.7.0",
   "private": true,
-  "proxy": "http://publish-p124452-e1227370.adobeaemcloud.com",
+  "proxy": "http://publish-p128728-e1256872.adobeaemcloud.com",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "format": "prettier --write 'src/**/*.{js,jsx,json,css,md}'"
   },
@@ -19,8 +19,6 @@
     "http-proxy-middleware": "^2.0.6",
     "isomorphic-fetch": "^3.0.0",
     "next": "14.0.3",
-    "node": "^21.6.1",
-    "npm": "^10.4.0",
     "react": "^18",
     "react-dom": "^18",
     "react-slick": "^0.29.0",
